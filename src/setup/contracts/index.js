@@ -53,7 +53,7 @@ export class Contracts {
     return [
       {
         title: 'Install dependencies for matic contracts',
-        task: () => projectInstall({
+        task: () => execa('npm', ['ci'], {
           cwd: this.repositoryDir
         })
       },

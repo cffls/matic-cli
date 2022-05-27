@@ -59,7 +59,7 @@ export class Genesis {
         },
         {
           title: 'Install dependencies for genesis-contracts',
-          task: () => projectInstall({
+          task: () => execa('npm', ['ci'], {
             cwd: this.repositoryDir
           })
         },
@@ -77,7 +77,7 @@ export class Genesis {
         },
         {
           title: 'Install dependencies for matic-contracts',
-          task: () => projectInstall({
+          task: () => execa('npm', ['ci'], {
             cwd: this.maticContractDir
           })
         },
